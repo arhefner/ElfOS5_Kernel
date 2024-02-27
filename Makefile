@@ -140,3 +140,6 @@ clean:
 	-rm *.prg
 	-rm $(PROJECT)
 
+install: kernel.bin
+	cp kernel.bin ../Image/
+

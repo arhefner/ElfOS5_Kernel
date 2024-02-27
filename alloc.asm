@@ -63,7 +63,7 @@ loop:         ldn       ra             ; get byte from header
               dec       ra
               lbnf      notfree        ; jump if block is too small
               glo       r7             ; get flags
-              ani       4              ; keep only permanent flag
+              ani       044h           ; keep only permanent flag
               ori       2              ; mark as used block 
               str       ra             ; and set block header
               glo       rc             ; subtract requested size from block size
@@ -185,7 +185,7 @@ notalign:     glo       ra             ; get new size
               str       ra
               dec       ra             ; point to block header
               glo       r7             ; get flags byte
-              ani       4              ; strip all but permanent flag
+              ani       044h           ; strip all but permanent flag
               ori       2              ; set used flag
               str       ra             ; write into header
               glo       ra             ; save this address

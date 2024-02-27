@@ -11,6 +11,7 @@
 ; *********************************************
               proc      finddirent
 
+              extrn     md_lump
               extrn     searchdir
               extrn     opencd
               extrn     openmd
@@ -27,7 +28,11 @@
               lbnz      relative       ; jump if relative path
               inc       rf             ; move past slash
               call      openmd         ; open master directory
-              lbr       continue       ; then continue
+              ldn       rf             ; check for master directory
+              lbnz      continue
+              mov       ra,md_lump
+              adi       0              ; signal entry found
+              lbr       return
 relative:     call      opencd         ; open current directory
 continue:     ldn       rf             ; get first byte of path
               call      validchar      ; check for valid filename char

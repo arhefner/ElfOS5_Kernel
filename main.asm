@@ -151,7 +151,7 @@ iserve:       dec    r2
 ivec:         dw     intret
 
               org    400h
-version:      db     5,0,4
+version:      db     5,0,5
 
               dw     [build]
               db     [month],[day]
@@ -199,8 +199,7 @@ o_trunc:      lbr    trunc
 d_freedirent: lbr    freedirent
 clockfrq:     dw     4000
               db     0
-curfstype:    db     0
-curdrive:     db     0
+scratch1:     dw     0
 date_time:    db     [month],[day],[year]-1972
 time:         db     [hour],[minute],[second]
 secnum:       dw     0

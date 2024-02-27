@@ -58,6 +58,7 @@ valid:        lbnf      current        ; jump if no directory specified
               lbnf      dirfound       ; jump if directory is found
               irx                      ; remove ra from stack
               irx
+              irx
               lbr       return         ; return to caller
 dirfound:     op        startingau     ; read directory starting lump
               op2       restore,rF_    ; recover name address

@@ -4,7 +4,7 @@
 scratch:   dw      0
            ds      128
 bootmsg:   db      'Starting Elf/OS ...',10,13
-           db      'V5.0.5'
+           db      'V5.1.0'
 crlf:      db      10,13,0
 prompt:    db      10,13,'Ready',10,13,': ',0
 errnf:     db      'File not found.',10,13,0

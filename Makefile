@@ -141,5 +141,5 @@ clean:
 	-rm $(PROJECT)
 
 install: kernel.bin
-	cp kernel.bin ../Image/
+	cp kernel.bin ../Image/os/
 

@@ -28,6 +28,7 @@
               extrn     save
               extrn     restore
               extrn     setr8r7_rd
+              extrn     getr8r7_rd
               extrn     fdadd
               extrn     fdsub
               extrn     seekend
@@ -222,6 +223,7 @@ nochange:     dec       rd
               call      d_ideread      ; read the sector
               pop       rd             ; recover rd
               call      setfileflags   ; set file flags
+              op        getr8r7_rd     ; return final position in r8:r7
               adi       0              ; indicate no errors
               lbr       return         ; and return
 

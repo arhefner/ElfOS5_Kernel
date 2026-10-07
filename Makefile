@@ -75,8 +75,8 @@ OBJS= \
 $(PROJECT): $(OBJS)
 	asm02 -l -L main.asm
 	-rm $(PROJECT).prg
-	link02 @kernel.lnk -s -S kernel.sym -h -o $(PROJECT).prg
-	link02 @kernel.lnk -s -S kernel.sym -b -o $(PROJECT).bin
+	link02 @kernel.lnk -s -S -h -o $(PROJECT).prg
+	link02 @kernel.lnk -s -S -b -o $(PROJECT).bin
 
 run:
 	run02 -boot

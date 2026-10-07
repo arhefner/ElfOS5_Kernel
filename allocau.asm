@@ -74,7 +74,7 @@ notfree1:     lda       rc             ; get byte from lump
               lbnz      notff1         ; jump if not
               ghi       rd             ; do we need to check for end of LAT
               lbnz      next1          ; jump if not
-              ldi       0xf            ; indicate no free lumps
+              ldi       0fh            ; indicate no free lumps
               smi       0              ; indicate error
               lbr       return         ; then return to caller
 notff1:       ldi       0              ; clear LAT flag
@@ -166,7 +166,7 @@ notfree2:     lda       rc             ; retrieve high word from lump
               lbnz      notff2
               ghi       rd             ; do we need to check for end of LAT
               lbnz      next2          ; jump if not
-              ldi       0xf            ; indicate no free lumps
+              ldi       0fh            ; indicate no free lumps
               smi       0              ; indicate error
               lbr       return         ; return to caller
 notff2:       ldi       0              ; clear LAT flag

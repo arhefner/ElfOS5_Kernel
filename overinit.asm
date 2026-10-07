@@ -88,6 +88,6 @@ errored:      pop       r9             ; recover consumed register
 ; 2-bytes  - Offset to name table
 ; 2-bytes  - number of overlay entries
 ; n-bytes  - entries
-             4 bytes - physical sector
-             3 bytes - sector offset
-             1 byte  - sectors to load
+;            4 bytes - physical sector
+;            3 bytes - sector offset
+;            1 byte  - sectors to load

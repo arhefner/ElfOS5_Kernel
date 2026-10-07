@@ -52,7 +52,7 @@ isdir:        push      ra             ; save dirent address
               irx
               irx
               pop       ra             ; remove dirent address
-              ldi       0h14           ; signal directory not empty
+              ldi       014h           ; signal directory not empty
               smi       0              ; signal error
               lbr       exit           ; and return to caller
 nofiles:      call      delchain       ; deallocate AUs assigned to directory

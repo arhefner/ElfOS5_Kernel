@@ -29,7 +29,7 @@
               lbz       good
               ldi       1              ; signal error
               smi       0
-'             lbr       return
+              lbr       return
 good:         inc       rd             ; move to low 2 bytes
               inc       rd
               lda       rd             ; retrieve them

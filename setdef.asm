@@ -34,7 +34,7 @@ copyloop:     lda       ra             ; read character from path
               lbr       return         ; and return to caller
 haspath:      smi       '/'            ; must be absolute path
               lbz       absolute       ; jump if so
-              ldi       0x13           ; indicate error
+              ldi       013h           ; indicate error
               smi       0
               lbr       return         ; and return
 absolute:     call      finddirent     ; find directory entry for path

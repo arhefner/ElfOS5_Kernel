@@ -151,7 +151,7 @@ iserve:       dec    r2
 ivec:         dw     intret
 
               org    400h
-version:      db     5,1,0
+version:      db     5,1,2
 
               dw     [build]
               db     [month],[day]
